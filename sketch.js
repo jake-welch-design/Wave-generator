@@ -54,6 +54,9 @@ function draw() {
     vertex(x, y);
   }
   endShape();
+  noStroke();
+  textSize(18);
+  text('TYPE "S" TO SAVE AN .SVG FILE OF YOUR WAVE',20,window.height-20);
 }
 
 function easeInOut(t) {
