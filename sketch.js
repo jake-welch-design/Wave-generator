@@ -45,9 +45,7 @@ function draw() {
     if (params.Modulation_on_off) {
       let modulationPoint = width - params.Modulation_Start;
       if (x > modulationPoint) {
-        // Calculate the ease factor using a sigmoid function or similar
         let easeFactor = easeInOut((x - modulationPoint) / (width - modulationPoint));
-        // Apply the eased modulation
         freq += params.Modulation * easeFactor * (width - modulationPoint);
       }
     }
@@ -58,7 +56,6 @@ function draw() {
   endShape();
 }
 
-// Easing function for a smooth transition
 function easeInOut(t) {
   return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
 }
